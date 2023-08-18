@@ -43,13 +43,15 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 # HTML output
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = "alabaster"
+html_theme = "furo"
 
 html_theme_options = {
-    "description": summary,
-    "github_user": "ajcerejeira",
-    "github_repo": "django-sqlite",
+    "source_repository": "https://github.com/ajcerejeira/django-sqlite/",
+    "source_branch": "main",
+    "source_directory": "docs/",
 }
+
+html_title = project
 
 
 # Intersphinx
