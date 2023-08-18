@@ -1,5 +1,6 @@
 # django-sqlite
 
+[![Documentation Status](https://readthedocs.org/projects/django-sqlite/badge/?version=latest)](https://django-sqlite.readthedocs.io/en/latest/?badge=latest)
 [![Build: GitHub Actions](https://github.com/ajcerejeira/django-sqlite/actions/workflows/ci.yml/badge.svg)](https://github.com/ajcerejeira/django-sqlite/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/ajcerejeira/django-sqlite/blob/main/LICENSE)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
