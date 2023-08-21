@@ -9,7 +9,6 @@
 from datetime import date
 from importlib.metadata import metadata
 
-
 # Import project metadata from the setuptools package
 
 project = metadata("django-sqlite")["name"]
