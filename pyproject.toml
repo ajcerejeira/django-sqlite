@@ -45,3 +45,6 @@ repository = "https://github.com/ajcerejeira/django-sqlite.git"
 issues = "https://github.com/ajcerejeira/django-sqlite/issues"
 
 [tool.setuptools_scm]
+
+[tool.isort]
+profile = "black"
