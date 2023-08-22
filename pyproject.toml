@@ -38,6 +38,7 @@ dynamic = ["version"]
 
 [project.optional-dependencies]
 docs = ["furo", "myst-parser", "sphinx"]
+lint = ["black", "isort", "ruff"]
 
 [project.urls]
 homepage = "https://github.com/ajcerejeira/django-sqlite"
