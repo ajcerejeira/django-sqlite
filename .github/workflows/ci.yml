@@ -5,6 +5,14 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
-      - uses: psf/black@stable
-      - uses: isort/isort-action@v1
-      - uses: chartboost/ruff-action@v1
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+      - name: Install dependencies
+        run: pip install .[lint]
+      - name: Lint with ruff
+        run: |
+          black . --check
+          isort . --check
+          ruff .
+
