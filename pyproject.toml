@@ -39,6 +39,7 @@ dynamic = ["version"]
 [project.optional-dependencies]
 docs = ["furo", "myst-parser", "sphinx"]
 lint = ["black", "isort", "ruff"]
+typing = ["mypy", "django-stubs[compatible-mypy]"]
 
 [project.urls]
 homepage = "https://github.com/ajcerejeira/django-sqlite"
@@ -49,3 +50,9 @@ issues = "https://github.com/ajcerejeira/django-sqlite/issues"
 
 [tool.isort]
 profile = "black"
+
+[tool.mypy]
+files = ["docs/**/*.py", "src/**/*.py", "tests/**/*.py"]
+namespace_packages = false
+strict = true
+warn_unreachable = true
