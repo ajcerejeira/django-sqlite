@@ -38,7 +38,7 @@ dynamic = ["version"]
 
 [project.optional-dependencies]
 docs = ["furo", "myst-parser", "sphinx"]
-lint = ["black", "isort", "ruff", "mypy", "django-stubs[compatible-mypy]"]
+lint = ["black", "ruff", "mypy", "django-stubs[compatible-mypy]"]
 
 [project.urls]
 homepage = "https://github.com/ajcerejeira/django-sqlite"
@@ -47,8 +47,22 @@ issues = "https://github.com/ajcerejeira/django-sqlite/issues"
 
 [tool.setuptools_scm]
 
-[tool.isort]
-profile = "black"
+[tool.ruff]
+select = [
+    "B",    # bugbear       https://beta.ruff.rs/docs/rules/#flake8-bugbear-b
+    "D",    # pydocstyle    https://beta.ruff.rs/docs/rules/#pydocstyle-d
+    "DJ",   # django        https://beta.ruff.rs/docs/rules/#flake8-django-dj
+    "E",    # pycodestyle   https://beta.ruff.rs/docs/rules/#pycodestyle-e-w
+    "F",    # PyFlakes      https://beta.ruff.rs/docs/rules/#pyflakes-f>
+    "I",    # isort         https://beta.ruff.rs/docs/rules/#isort-i
+    "N",    # pep8-naming   https://beta.ruff.rs/docs/rules/#pep8-naming-n
+    "S",    # bandit        https://beta.ruff.rs/docs/rules/#flake8-bandit-s
+    "W",    # pycodestyle   https://beta.ruff.rs/docs/rules/#pycodestyle-e-w
+]
+line-length = 88
+
+[tool.ruff.pydocstyle]
+convention = "google"
 
 [tool.mypy]
 files = ["docs/**/*.py", "src/**/*.py", "tests/**/*.py"]
