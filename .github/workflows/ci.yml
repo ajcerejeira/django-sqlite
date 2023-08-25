@@ -10,9 +10,12 @@ jobs:
           python-version: 3.11
       - name: Install dependencies
         run: pip install .[lint]
-      - name: Lint with ruff
+      - name: Style check with black and isort
         run: |
           black . --check
           isort . --check
-          ruff .
+      - name: Lint with ruff
+        run: ruff .
+      - name: Type check with mypy
+        run: mypy
 
