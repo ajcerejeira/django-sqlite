@@ -9,12 +9,10 @@ jobs:
         with:
           python-version: 3.14
           cache: 'pip'
-      - name: Install dependencies
-        run: pip install .[lint]
-      - name: Style check with black
-        run: black . --check
-      - name: Lint with ruff
-        run: ruff .
+      - name: Lint and style check with ruff
+        uses: astral-sh/ruff-action@v4.0.0
+        with:
+          args: "format --check --diff"
       - name: Type check with mypy
         run: mypy
 

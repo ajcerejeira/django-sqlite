@@ -13,4 +13,3 @@ class SQLiteConfig(AppConfig):
 
     name = "django_sqlite"
     verbose_name = _("SQLite utils")
-
