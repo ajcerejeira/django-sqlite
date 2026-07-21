@@ -5,14 +5,17 @@ jobs:
     runs-on: ubuntu-26.04
     steps:
       - uses: actions/checkout@v3
+
       - uses: actions/setup-python@v7
         with:
-          python-version: 3.14
-          cache: 'pip'
-      - name: Lint and style check with ruff
-        uses: astral-sh/ruff-action@v4.0.0
-        with:
-          args: "format --check --diff"
-      - name: Type check with mypy
-        run: mypy
+          python-version-file: "pyproject.toml"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+
+      - name: Lint with ruff
+        run: uvx ruff check
+
+      - name: Type check with ty
+        run: uvx ty check
 
