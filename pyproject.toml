@@ -32,9 +32,14 @@ classifiers = [
 dependencies = ["Django>=5.2"]
 dynamic = ["version"]
 
-[project.optional-dependencies]
-docs = ["furo", "myst-parser", "sphinx"]
-lint = ["ruff", "ty"]
+[dependency-groups]
+dev = [
+    "furo",
+    "myst-parser",
+    "ruff",
+    "sphinx",
+    "ty",
+]
 
 [project.urls]
 homepage = "https://github.com/ajcerejeira/django-sqlite"
